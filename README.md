@@ -14,4 +14,4 @@ This is a list of technologies that I used in this project
 The project is completely ready. The client was satisfied with my job.
 
 ## Contact
-Created by me :) Feel free to contact me - ivanlysianok@gmail.com.
+Feel free to contact me :) | ivanlysianok@gmail.com.
