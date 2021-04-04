@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.thanks {
+  width: 100%;
+  min-height: 100vh;
+  background: url("img/thanks.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.thanks__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  z-index: 1000;
+  padding: 0 40px;
+}
+
+.thanks__text {
+  padding: 0 20px;
+}
+
+.thanks__text h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+  font-size: 3.375rem;
+  color: #ffad00;
+  line-height: 125%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-animation: headerAnimate 800ms ease-in-out forwards;
+          animation: headerAnimate 800ms ease-in-out forwards;
+}
+
+.thanks__text p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 150%;
+  font-size: 1.75rem;
+  color: #f6f6f6;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+  line-height: 125%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+  -webkit-animation: textAnimate 800ms ease-in-out forwards;
+          animation: textAnimate 800ms ease-in-out forwards;
+}
+
+.thanks__bottom {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.thanks__bottom a {
+  color: #f6f6f6;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  -webkit-transition: 150ms color ease-in-out;
+  transition: 150ms color ease-in-out;
+}
+
+.thanks__bottom a:hover {
+  color: #ffad00;
+}
+
+@media screen and (max-width: 1200px) {
+  .thanks__content {
+    padding: 0 20px;
+  }
+  .thanks__text h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 125%;
+    font-size: 3.125rem;
+    color: #ffad00;
+  }
+  .thanks__text p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 1.625rem;
+    color: #f6f6f6;
+    width: 80%;
+    margin: 0.5rem auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .thanks__content {
+    padding: 0 20px;
+  }
+  .thanks__text h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 125%;
+    font-size: 3rem;
+    color: #ffad00;
+  }
+  .thanks__text p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 1.5rem;
+    color: #f6f6f6;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .thanks__content {
+    padding: 0 20px;
+  }
+  .thanks__text h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 125%;
+    font-size: 2.625rem;
+    color: #ffad00;
+  }
+  .thanks__text p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+    font-size: 1.375rem;
+    color: #f6f6f6;
+    width: 100%;
+    margin: 0.5rem auto 0 auto;
+  }
+}
+
+@-webkit-keyframes headerAnimate {
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes headerAnimate {
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes textAnimate {
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes textAnimate {
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=thanks.css.map */

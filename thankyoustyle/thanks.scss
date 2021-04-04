@@ -1,0 +1,154 @@
+// <----- Variables -----> //
+
+@import "../indexstyle/vars.scss";
+@import "../indexstyle/globals.scss";
+
+// <----- Thank You Page -----> //
+
+.thanks {
+    width: 100%;
+    min-height: 100vh;
+    background: url("img/thanks.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.thanks__content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    padding: $padding-section-d;
+}
+
+.thanks__text {
+    padding:0 20px;
+    h1 {
+        @include headerPoppins(3.375rem, $yellow);
+        line-height: 125%;
+
+        transform: translateY(-50%);
+        opacity: 0;
+        animation: headerAnimate 800ms ease-in-out forwards;
+    }
+
+    p {
+        @include textPoppins(1.75rem, $white);
+        letter-spacing: 1px;
+        margin-top: 0.5rem;
+        line-height: 125%;
+
+        transform: translateY(50%);
+        opacity: 0;
+        animation: textAnimate 800ms ease-in-out forwards;
+    }
+}
+
+.thanks__bottom {
+    position: absolute;
+    bottom: 2rem;
+
+    a {
+        color: $white;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 2px;
+
+        transition: 150ms color ease-in-out;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+}
+
+// <----- @ About Page - Media Queries @ -----> //
+
+// <----- 1 200 px -----> //
+
+@media screen and (max-width: 1200px) {
+
+    .thanks__content {
+        padding: $padding-section-m;
+    }
+    .thanks__text {
+        h1 {
+            @include headerPoppins(3.125rem, $yellow);
+        }
+    
+        p {
+            @include textPoppins(1.625rem, $white);
+            width: 80%;
+            margin: 0.5rem auto 0 auto; 
+        }
+    }
+}
+
+// <----- 875 px -----> //
+
+@media screen and (max-width: 875px) {
+
+    .thanks__content {
+        padding: $padding-section-m;
+    }
+    .thanks__text {
+        h1 {
+            @include headerPoppins(3rem, $yellow);
+        }
+    
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+}
+
+// <----- 750 px -----> //
+
+@media screen and (max-width: 750px) {
+
+    .thanks__content {
+        padding: $padding-section-m;
+    }
+    .thanks__text {
+        h1 {
+            @include headerPoppins(2.625rem, $yellow);
+        }
+    
+        p {
+            @include textPoppins(1.375rem, $white);
+            width: 100%;
+            margin: 0.5rem auto 0 auto; 
+        }
+    }
+}
+
+
+// <----- @ About Page - Animation @ -----> //
+
+
+@keyframes headerAnimate {
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes textAnimate {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
