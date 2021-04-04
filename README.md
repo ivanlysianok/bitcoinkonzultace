@@ -1,5 +1,5 @@
-# Bitcoin konzultace - Simple and Modern Landing Page
-> Here goes your awesome project description!
+# Bitcoin konzultace
+> A simple and modern langing page that serves my client as business card.
 
 ## Introduction
 Add more general information about project. What the purpose of the project is? Motivation?
@@ -14,4 +14,4 @@ List of features ready and TODOs for future development
 The project is entirely done
 
 ## Contact
-Created by me :) [@ivanlysianok]
+Created by me :) Feel free to contact me - ivanlysianok@gmail.com.
