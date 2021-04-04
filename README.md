@@ -1,17 +1,7 @@
-# Project Name
+# Bitcoin konzultace - Simple and Modern Landing Page
 > Here goes your awesome project description!
 
-## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
-
-## General info
+## Introduction
 Add more general information about project. What the purpose of the project is? Motivation?
 
 ## Screenshots
