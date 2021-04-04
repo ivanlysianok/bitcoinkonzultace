@@ -1,0 +1,83 @@
+// <----- Variables -----> //
+
+@import "../indexstyle/vars.scss";
+@import "../indexstyle/globals.scss";
+
+// <----- Privacy Page -----> //
+
+.privacy {
+    width: 100%;
+    background-color: $white;
+    height: auto;
+    overflow: hidden;
+}
+
+.privacy__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 1rem auto;
+    padding: $padding-section-d;
+}
+
+.privacy__header {
+    @include headerPoppins(2rem, $yellow);
+    margin-bottom: 2rem;
+}
+
+.privacy__content-block:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.privacy__content-block__header {
+    @include headerPoppins(1.5rem, $black);
+    margin-bottom: 0.75rem;
+}
+
+.privacy__content-block__text {
+    @include textPoppins(1rem, #363636);
+    font-weight: 400;
+
+    span {
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    a {
+        color: $black;
+        text-decoration: underline;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.privacy__link {
+    color: $black;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-decoration: underline;
+
+    transition: 150ms color ease-in-out;
+
+    &:hover {
+        color: $yellow;
+    }
+}
+
+// <----- @ Privacy Page - Media Queries @ -----> //
+
+// <----- 675 px -----> //
+
+@media screen and (max-width: 675px) {
+    .privacy__container {
+        max-width: 675px;
+        padding: $padding-section-m;
+    }
+
+    .privacy__content {
+        text-align: center;
+    }
+}
