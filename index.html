@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bitcoin konzultace - Jakub Hlavnička">
+    <!--_____CSS_____-->
+    <link rel="stylesheet" href="indexstyle/style.css">
+    <!--_____BOOTSTRAP CDN_____-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <!--_____FONTS_____-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!--_____FAV_____-->
+    <link rel="icon" href="indexstyle/img/content/favicon.png">
+    <!--_____TITLE_____--> 
+    <title>Bitcoin konzultace</title>
+</head>
+
+<body>
+
+    <!----- ///// Header ///// ----->
+
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#uvod" class="header__logo">
+                <div class="header__logo__container">
+                    <div class="header__logo__img">
+                        <img src="indexstyle/img/content/bitcoinsvg.svg" alt="bitcoin icon">
+                    </div>
+                    <div class="header__logo__text">
+                        <p>itcoinkonzultace.cz</p>
+                    </div>
+                </div>
+            </a>
+            <nav class="header__nav" id="navbar">
+                <a class="nav__links" href="#uvod" onclick="menuToggle();">Úvod</a>
+                <a class="nav__links" href="#o-me" onclick="menuToggle();">O mě</a>
+                <a class="nav__links" href="#konzultace" onclick="menuToggle();">Konzultace</a>
+                <a class="nav__links" href="#kontakty" onclick="menuToggle();">Kontakty</a>
+            </nav>
+            <div class="header__hamburger" id="hamburger" onclick="menuToggle();">
+                <div class="line line01"></div>
+                <div class="line line02"></div>
+                <div class="line line03"></div>
+            </div>
+        </div>
+        <div class="header__overlay"></div>
+    </header>
+
+    <!----- ///// First Page ///// ----->
+
+    <section class="first-page" id="uvod">
+        <div class="first-page__container">
+            <div class="first-page__inner">
+                <div class="first-page__content">
+                    <div class="first-page__header">
+                        <h1>Rádi byste investovali do <span>bitcoinu</span> a nevíte si rady?</h1>
+                    </div>
+                    <div class="first-page__text">
+                        <p>Zabývám se investicemi do Bitcoinu, řeším budoucnost světových peněz a snažím se zabezpečit
+                            kupní
+                            sílu firmy i jednotlivce. To vše za předem domluvenou cenu.</p>
+                    </div>
+                    <div class="first-page__buttons">
+                        <a class="first-page__st-btn" href="#kontakty">Nezávazná<br>poptávka</a>
+                        <a class="first-page__nd-btn" href="#konzultace">Zjistit více</a>
+                    </div>
+                </div>
+
+                <div class="first-page__img-container">
+                    <img src="indexstyle/img/content/bitcoin.png" alt="bitcoin" class="first-page__img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----- ///// About Page ///// ----->
+
+    <section class="about" id="o-me">
+        <div class="about__container">
+            <div class="about__describe">
+                <div class="about__header">
+                    <h2>Něco o mě</h2>
+                </div>
+                <div class="about__text">
+                    <p>Je mi 20 let, druhý rok jsem aktivním investorem a studují budoucí možný vývoj. Momentálně se
+                        soustředím především na Bitcoin a snažím se své
+                        znalosti předávat lidem a firmám, kteří němají čas, zdroje či dovednosti tento fenomén pochopit.
+                    </p>
+                </div>
+            </div>
+            <div class="about__grid">
+                <!----- 1st block ----->
+                <div class="about__content about__content-01">
+                    <div class="about__block">
+                        <div class="about__block-content about__block-content-01">
+                            <div class="about__block-content-big">
+                                <h4>2</h4>
+                            </div>
+                            <div class="about__block-content-small">
+                                <p>roky neustáleho<br>studia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----- 2nd block ----->
+                <div class="about__content about__content-02">
+                    <div class="about__block">
+                        <div class="about__block-content about__block-content-02">
+                            <div class="about__block-content-big">
+                                <h4>24/7</h4>
+                            </div>
+                            <div class="about__block-content-small">
+                                <p>sledování<br>novinek</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!----- 3rd block ----->
+                <div class="about__content about__content-03">
+                    <div class="about__block about__block-03">
+                        <div class="about__block-content about__block-content-03">
+                            <div class="about__block-content-big">
+                                <h4>1</h4>
+                            </div>
+                            <div class="about__block-content-small">
+                                <p>kryptoměna</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----- ///// Consult Page ///// ----->
+
+    <section class="consult" id="konzultace">
+        <div class="consult__container">
+
+            <!----- Consult 1st part ----->
+
+            <div class="consult__text-content">
+                <div class="consult__header">
+                    <h2>Konzultace</h2>
+                </div>
+                <div class="consult__paragraph">
+                    <div class="consult__paragraph__header">
+                        <h4>Průběh konzultace</h4>
+                    </div>
+                    <div class="consult__paragraph__text">
+                        <p>Během konzultace s Vámi proberu Vaší aktuální situaci, možné řešení Vašich požadavků a
+                            především o vhodnost investovat do Bitcoinu, jakožto uchovatele hodnoty. Především se
+                            snažím zamezit ztrátě vysokých finančních prostředků díky neporozumnění kryptoměnám, jejich
+                            velkému či nizkému očekávání a také se snažím zajistit psychickou pohodu investora.</p>
+                    </div>
+                </div>
+                <div class="consult__paragraph">
+                    <div class="consult__paragraph__header">
+                        <h4>Cena konzultace</h4>
+                    </div>
+                    <div class="consult__paragraph__text">
+                        <p class="consult__p">Cena za moji konzultaci činí:</p>
+                        <div class="consult__price-contain">
+                            <p class="consult__price">2 000 Kč.</p>
+                        </div>
+                        <p class="consult__p">Platba možná také Bitcoinem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Consult 2nd part ----->
+
+            <div class="consult__info-content">
+                <div class="consult__info-header">
+                    <h4>Náplň konzultace</h4>
+                </div>
+                <div class="consult__info__grid">
+                    <div class="consult__info__item consult__item-02">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Ujasnění cílů a požadavků</p>
+                        </div>
+                    </div>
+                    <div class="consult__info__item consult__item-03">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Reálná rizika a příležitosti</p>
+                        </div>
+                    </div>
+                    <div class="consult__info__item consult__item-04">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Vhodná investiční strategie</p>
+                        </div>
+                    </div>
+                    <div class="consult__info__item consult__item-05">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Technická podpora</p>
+                        </div>
+                    </div>
+                    <div class="consult__info__item consult__item-06">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Otázky a nejasnosti</p>
+                        </div>
+                    </div>
+                    <div class="consult__info__item consult__item-06">
+                        <img src="indexstyle/img/content/checked.svg" alt="checked" class="consult__info__item__img">
+                        <div class="consult__info__item__text">
+                            <p>Případný další kontakt skrz telefon či e-mail</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Consult 3rd part ----->
+
+            <div class="consult__warning-content">
+                <hr>
+                <p><span>Upozornění:</span> Nejsem finanční či investiční poradce, za veškerá Vaše rozhodnutí neberu
+                    zodpovědnost. Případné materiály slouží čistě k zábavně vzdělávácím účelům.
+                </p>
+                <a class="consult__st-btn" href="#contact__form">Nezávazná<br>poptávka</a>
+            </div>
+        </div>
+    </section>
+
+    <!----- ///// Contact Page ///// ----->
+
+    <section class="contact" id="kontakty">
+        <div class="contact__container">
+            <div class="contact__text-content">
+                <div class="contact__header">
+                    <h2>Kontakty</h2>
+                </div>
+                <div class="contact__text">
+                    <p>Skrz kontaktní formulář je možné sjednat konzultaci. Skrz kontaktní formulář je možné sjednat konzultaci.</p>
+                </div>
+            </div>
+            <div class="contact__main-content">
+                <form method="POST" action="mail.php" class="contact__form" id="contact__form" autocomplete="off">
+                    <h4>Kontaktní formulář</h4>
+                    <div class="contact__form__content">
+                        <input type="text" class="contact__form__input" id="form__name" placeholder="Vaše jméno*"
+                            name="form-name" required>
+                        <input type="text" class="contact__form__input" id="form__lastname" placeholder="Vaše příjmení*"
+                            name="form-lastname" required>
+                        <input type="text" class="contact__form__input" id="form__contacts"
+                            placeholder="Váš telefon či e-mail*" name="form-contact" required>
+                    </div>
+                    <button class="contact__form__btn-container" id="contact__button" type="submit">
+                        <div class="contact__form__btn">
+                            <p>Spojit se</p>
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+                    </button>
+                    <div class="contact__form__info">
+                        <p>*Kliknutím na tlačítko “Spojit se” souhlasíte se zpracováním <a href="privacy.html">osobních
+                                údajů.</a>*</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!----- Footer ----->
+
+    <div class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__header">
+                    <h2>Kontaktní informace:</h2>
+                </div>
+                <div class="footer__text">
+                    <p>Jakub Hlavnička</p>
+                    <p>IČO: 10682783</p>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__phone">
+                        <img src="indexstyle/img/content/phone.svg" alt="">
+                        <p>+420 605 580 740</p>
+                    </div>
+                    <div class="footer__email">
+                        <img src="indexstyle/img/content/email.svg" alt="">
+                        <p>info@bitcoinkozultace.cz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__ps">
+                <hr class="footer__hr">
+                <p>Tvorba webových stránek: <a href="https://www.instagram.com/ivan.lysianok/" target="blank">Ivan
+                        Lysianok</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!--_____JS SCRIPTs_____-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
