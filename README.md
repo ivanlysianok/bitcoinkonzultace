@@ -1,5 +1,5 @@
 # Bitcoin konzultace
-> A simple and modern and responsive langing page that serves my client as business card.
+> A simple and modern and responsive langing page that serves my client as business card. Here it is - https://www.bitcoinkonzultace.cz/
 
 ## Introduction
 This project was completely created by me. First I was designed a website template and created UX/UI in Figma (+ edited project images in Photoshop). After I did front-end part and litle bit of back-end in Visual Studio Code. As a result, I uploaded the entire project to the hosting via FTP to the hosting and presented result to the client. Thats it!
