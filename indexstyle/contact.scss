@@ -1,0 +1,597 @@
+// <----- Variables -----> //
+
+@import "vars";
+
+// <----- Contact Page -----> //
+
+.contact {
+    width: 100%;
+    background-image: url("img/bg/contact.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.contact__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+}
+
+.contact__text-content {
+    margin: $margin-section-d 0 $margin-section-d 0;
+}
+
+.contact__header {
+    margin-bottom: 1.875rem;
+    h2 {
+        @include subHeaderPoppins(2.625rem, $yellow);
+    }
+}
+
+.contact__text {
+    p {
+        @include textPoppins(1.75rem, $white);
+    }
+}
+
+// <----- Contact Form -----> //
+
+.contact__main-content {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    margin-bottom: 3.75rem;
+}
+
+.contact__form {
+    max-width: 100%;
+    width: 550px;
+    margin: 0 auto;
+    min-height: 700px;
+    background-color: $white;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+        margin-bottom: 3.5rem;
+        @include subHeaderPoppins(2.25rem, $yellow);
+    }
+}
+
+.contact__form__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 3.5rem;
+
+    .contact__form__input {
+        width: 100%;
+        min-height: 50px;
+
+        font-size: 1.5rem;
+        font-family: "Poppins", sans-serif;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid $formGray;
+
+        background: transparent;
+        outline: none;
+        color: $black;
+
+        transition: color 0.1s ease-in;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        &::placeholder {
+            color: $formGray;
+            border-bottom: $formGray;
+        }
+
+        &:focus {
+            color: $black;
+            border-bottom: $yellow solid 2px;
+        }
+    }
+}
+
+.contact__form__btn-container {
+    margin: 3rem 0 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    @include button(125%, 1rem, 45px);
+    padding: 1.4rem 2.5rem;
+    box-shadow: rgba(224, 192, 7, 0.2) 0px 7px 29px 0px;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.contact__form__btn {
+    display: flex;
+    align-items: center;
+
+    .bi-arrow-right {
+        font-size: 2.25rem;
+        margin-left: 8px;
+    }
+}
+
+.contact__form__info {
+    width: 80%;
+    text-align: center;
+    color: $formGray;
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    a {
+        text-decoration: underline;
+        color: $yellow;
+    }
+}
+
+// <----- @ Contact Page- Media Queries @ -----> //
+
+// <----- 1200 px -----> //
+
+@media screen and (max-width: 1200px) {
+    .contact__header {
+        margin-bottom: 1rem;
+        h2 {
+            @include subHeaderPoppins(2.25rem, $yellow);
+        }
+    }
+
+    .contact__text {
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    // <----- Contact Form -----> //
+
+    .contact__form {
+        width: 500px;
+        margin: 0 auto;
+        min-height: 675px;
+        h4 {
+            margin-bottom: 2.5rem;
+            @include subHeaderPoppins(2rem, $yellow);
+        }
+    }
+
+    .contact__form__content {
+        .contact__form__input {
+            width: 100%;
+            min-height: 50px;
+            font-size: 1.375rem;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .contact__form__btn-container {
+        margin: 2.5rem 0 2rem 0;
+        @include button(125%, 1rem, 45px);
+        padding: 1.3rem 2.25rem;
+    }
+
+    .contact__form__btn {
+        display: flex;
+        align-items: center;
+
+        .bi-arrow-right {
+            font-size: 2.25rem;
+            margin-left: 8px;
+        }
+    }
+
+    .contact__form__info {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+// <----- 875 px (Hamburger Menu) -----> //
+
+@media screen and (max-width: 875px) {
+    .contact__container {
+        padding: $padding-section-m;
+    }
+
+    .contact__text-content {
+        margin: $margin-section-d2 0 $margin-section-d2 0;
+    }
+
+    .contact__header {
+        text-align: center;
+
+        h2 {
+            @include subHeaderPoppins(2.25rem, $yellow);
+        }
+    }
+
+    .contact__text {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    .contact__form__btn-container {
+        margin: 3rem 0 2.5rem 0;
+        display: flex;
+        justify-content: center;
+        @include button(125%, 1rem, 45px);
+        padding: 1.7rem 3.2rem;
+        letter-spacing: 2px;
+    }
+
+    .contact__form__btn {
+        display: flex;
+        align-items: center;
+
+        .bi-arrow-right {
+            display: none;
+        }
+    }
+}
+
+// <----- 675px -----> //
+
+@media screen and (max-width: 675px) {
+    .contact__text-content {
+        margin: $margin-section-d2 0 $margin-section-d2 0;
+    }
+
+    .contact__header {
+        text-align: center;
+
+        h2 {
+            @include subHeaderPoppins(2rem, $yellow);
+        }
+    }
+
+    .contact__text {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+    }
+
+    .contact__form__content {
+        padding: 0 2rem;
+
+        .contact__form__input {
+            width: 100%;
+            min-height: 50px;
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    // <----- Contact Form -----> //
+
+    .contact__form {
+        max-width: 100%;
+        width: 450px;
+        margin: 0 auto;
+        min-height: 650px;
+
+        h4 {
+            width: 80%;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            @include subHeaderPoppins(1.875rem, $yellow);
+            line-height: 130%;
+        }
+    }
+
+    .contact__form__content {
+        padding: 0 2rem;
+
+        .contact__form__input {
+            width: 100%;
+            min-height: 50px;
+
+            font-size: 1.25rem;
+
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
+
+    .contact__form__btn-container {
+        margin: 2.5rem 0 2rem 0;
+        @include button(125%, 0.875rem, 45px);
+        padding: 1.7rem 3.2rem;
+        letter-spacing: 2px;
+    }
+
+    .contact__form__info {
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+// <----- 485px -----> //
+
+@media screen and (max-width: 485px) {
+    .contact__form__content {
+        padding: 0 1.5rem;
+    }
+
+    .contact__form__btn-container {
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+// <----- 375px -----> //
+
+@media screen and (max-width: 375px) {
+    .contact__form {
+        max-width: 100%;
+        width: 450px;
+        margin: 0 auto;
+        min-height: 600px;
+
+        h4 {
+            width: 80%;
+            text-align: center;
+            margin-bottom: 2rem;
+            @include subHeaderPoppins(1.75rem, $yellow);
+            line-height: 130%;
+        }
+    }
+
+    .contact__form__info {
+        p {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+// <----- Footer -----> //
+
+.footer {
+    width: 100%;
+    background-color: $white;
+    overflow: hidden;
+}
+
+.footer__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+}
+
+.footer__content {
+    margin: 2rem 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+}
+
+.footer__header {
+    margin-bottom: 1rem;
+    h2 {
+        @include subHeaderPoppins(2.25rem, $yellow);
+        line-height: 130%;
+    }
+}
+
+.footer__text {
+    margin-bottom: 1rem;
+    p {
+        @include textPoppins(1.5rem, $black);
+    }
+}
+
+.footer__info {
+    display: flex;
+    align-items: center;
+    margin-left: 90px;
+}
+
+.footer__phone {
+    display: flex;
+    align-items: center;
+    img {
+        width: 48px;
+    }
+
+    p {
+        @include textPoppins(1.5rem, $black);
+        margin-left: 5px;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        background-color: $yellow;
+        width: 5px;
+        height: 35px;
+        margin: 0 1.2rem;
+    }
+}
+
+.footer__email {
+    display: flex;
+    align-items: center;
+    img {
+        width: 48px;
+    }
+
+    p {
+        @include textPoppins(1.5rem, $black);
+        margin-left: 10px;
+    }
+}
+
+.footer__ps {
+    text-align: center;
+    .footer__hr {
+        width: 100%;
+        border: $formGray 1px solid;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin-bottom: 2.5rem;
+        @include textPoppins(1.375rem, $black);
+
+        a {
+            color: $yellow;
+        }
+    }
+}
+
+// <----- @ Footer - Media Queries @ -----> //
+
+// <----- 1200 px -----> //
+
+@media screen and (max-width: 1200px) {
+    .footer__content {
+        margin: 1.5rem 0;
+    }
+
+    .footer__header {
+        margin-bottom: 15px;
+        h2 {
+            @include subHeaderPoppins(2rem, $yellow);
+        }
+    }
+
+    .footer__text {
+        margin-bottom: 15px;
+        p {
+            @include textPoppins(1.375rem, $black);
+        }
+    }
+
+    .footer__phone {
+        display: flex;
+        align-items: center;
+        img {
+            width: 2.375rem;
+        }
+
+        p {
+            @include textPoppins(1.375rem, $black);
+            margin-left: 5px;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $yellow;
+            width: 5px;
+            height: 30px;
+            margin: 0 1.2rem;
+        }
+    }
+
+    .footer__email {
+        display: flex;
+        align-items: center;
+        img {
+            width: 2.375rem;
+        }
+
+        p {
+            @include textPoppins(1.375rem, $black);
+            margin-left: 10px;
+        }
+    }
+
+    .footer__ps {
+        .footer__hr {
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            @include textPoppins(1.25rem, $black);
+        }
+    }
+}
+
+// <----- 875 px (Hamburger Menu)-----> //
+
+@media screen and (max-width: 875px) {
+    .footer__container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer__content {
+        margin: 1rem 0;
+    }
+
+    .footer__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+    }
+
+    .footer__phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        &::after {
+            display: none;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-left: 0;
+        }
+    }
+
+    .footer__email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-left: 0;
+        }
+    }
+}
+

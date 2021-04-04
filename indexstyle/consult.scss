@@ -1,0 +1,355 @@
+// <----- Variables -----> //
+
+@import "vars";
+
+// <----- Consult Page -----> //
+
+.consult {
+    width: 100%;
+    background-image: url("img/bg/consult.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.consult__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+}
+
+// <----- 1st Part -----> //
+
+.consult__text-content {
+    margin: $margin-section-d 0 2.5rem 0;
+}
+
+.consult__header {
+    margin-bottom: 1.875rem;
+    h2 {
+        @include subHeaderPoppins(2.625rem, $yellow);
+    }
+}
+
+.consult__paragraph {
+    margin-bottom: 2.5rem;
+}
+
+.consult__paragraph__header {
+    margin-bottom: 1.25rem;
+    h4 {
+        @include textPoppins(1.75rem, $white);
+        font-weight: 600;
+    }
+}
+
+.consult__paragraph__text {
+    p {
+        @include textPoppins(1.75rem, $white);
+    }
+
+    .consult__p {
+        display: inline-block;
+    }
+
+    .consult__price-contain {
+        display: inline-block;
+        background-color: $yellow;
+        padding: 8px 14px;
+        margin: 0 10px;
+    }
+
+    .consult__price {
+        font-weight: 600;
+    }
+}
+
+// <----- 2nd Part -----> //
+
+.consult__info-content {
+    margin-bottom: 1.875rem;
+    .consult__info-header {
+        margin-bottom: 2rem;
+        h4 {
+            @include subSubHeaderPoppins(1.75rem, $white);
+            font-weight: 600;
+        }
+    }
+}
+
+.consult__info__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: 3rem;
+}
+
+.consult__info__item {
+    display: flex;
+    align-items: center;
+}
+
+.consult__info__item__img {
+    width: 4.5rem;
+}
+
+.consult__info__item__text {
+    margin-left: 1rem;
+    p {
+        @include textPoppins(1.75rem, $white);
+        line-height: 130%;
+    }
+}
+
+// <----- 3rd Part -----> //
+
+.consult__warning-content {
+    text-align: center;
+    margin-bottom: $margin-section-d;
+
+    hr {
+        width: 100%;
+        border: 1px solid $white;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        @include textPoppins(1.75rem, $white);
+        margin-bottom: 2.5rem;
+        span {
+            color: $yellow;
+        }
+    }
+}
+
+.consult__st-btn {
+    @include button(125%, 1rem, 45px);
+    padding: 1.3rem 3rem;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// <----- @ Consult Page - Media Queries @ -----> //
+
+// <----- 1200 px -----> //
+
+@media screen and (max-width: 1200px) {
+    .consult__header {
+        margin-bottom: 1rem;
+        h2 {
+            @include subHeaderPoppins(2.25rem, $yellow);
+        }
+    }
+
+    .consult__paragraph__header {
+        margin-bottom: 1rem;
+        h4 {
+            @include textPoppins(1.5rem, $white);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+    }
+
+    .consult__paragraph__text {
+        margin-bottom: 2rem;
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    // <----- 2nd Part -----> //
+
+    .consult__info-content {
+        .consult__info-header {
+            h4 {
+                @include subSubHeaderPoppins(1.5rem, $white);
+            }
+        }
+    }
+
+    .consult__info__item__img {
+        width: 3.75rem;
+    }
+
+    .consult__info__item__text {
+        margin-left: 0.875rem;
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    // <----- 3rd Part -----> //
+
+    .consult__warning-content {
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    .consult__st-btn {
+        @include button(125%, 1rem, 45px);
+        padding: 1.2rem 2.8rem;
+    }
+}
+
+// <----- 875 px (Hamburger Menu)-----> //
+
+@media screen and (max-width: 875px) {
+    .consult__container {
+        padding: $padding-section-m;
+    }
+
+    .consult__text-content {
+        text-align: center;
+        margin: 3rem auto;
+        width: 90%;
+    }
+
+    // <----- 2nd Part -----> //
+
+    .consult__info-content {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .consult__info__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        justify-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .consult__info__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .consult__info__item__text {
+        margin-left: 0;
+    }
+
+    .consult__info__item__img {
+        margin-bottom: 0.875rem;
+    }
+
+    // <----- 3rd Part -----> //
+
+    .consult__warning-content {
+        width: 90%;
+        margin:0 auto 2rem auto;
+        hr {
+            margin: 2rem 0;
+        }
+    }
+
+    .consult__warning-content p {
+        margin-bottom: 2rem;
+    }
+
+    .consult__st-btn {
+        @include button(125%, 0.875rem, 45px);
+        padding: 1.2rem 2.8rem;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// <----- 675 px -----> //
+
+@media screen and (max-width: 675px) {
+    .consult__header {
+        margin-bottom: 1rem;
+        h2 {
+            @include subHeaderPoppins(2rem, $yellow);
+        }
+    }
+
+    .consult__paragraph {
+        margin-bottom: 2rem;
+    }
+
+    .consult__paragraph__header {
+        margin-bottom: 1rem;
+        h4 {
+            @include textPoppins(1.375rem, $white);
+            font-weight: 600;
+        }
+    }
+
+    .consult__paragraph__text {
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+
+        .consult__p {
+            display: block;
+        }
+
+        .consult__price-contain {
+            background-color: $yellow;
+            padding: 8px 14px;
+            margin: 0 10px;
+            margin: 1rem 0;
+        }
+
+        .consult__price {
+            font-weight: 600;
+        }
+    }
+
+    // <----- 2nd Part -----> //
+
+    .consult__info-content {
+        .consult__info-header {
+            h4 {
+                @include subSubHeaderPoppins(1.375rem, $white);
+            }
+        }
+    }
+
+    .consult__info__item__img {
+        width: 3.5rem;
+    }
+
+    .consult__info__item__text {
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+    }
+
+    // <----- 3rd Part -----> //
+
+    .consult__warning-content {
+
+        p {
+            @include textPoppins(1.375rem, $white);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// <----- 450px -----> //
+
+@media screen and (max-width: 450px) {
+    .consult__info-content {
+        width: 100%;
+    }
+
+    .consult__info__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+}

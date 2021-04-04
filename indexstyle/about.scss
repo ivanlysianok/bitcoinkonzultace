@@ -1,0 +1,252 @@
+// <----- Variables -----> //
+
+@import "vars";
+
+// <----- About Page -----> //
+
+.about {
+    width: 100%;
+    background-image: url("img/bg/about.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.about__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+}
+
+.about__describe {
+    margin: $margin-section-d 0;
+}
+
+.about__header {
+    margin-bottom: 1.875rem;
+    h2 {
+        @include subHeaderPoppins(2.625rem, $yellow);
+    }
+}
+
+.about__text {
+    p {
+        @include textPoppins(1.75rem, $white);
+    }
+}
+
+.about__grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    justify-items: center;
+    margin-bottom: $margin-section-d;
+}
+
+.about__content {
+    width: 100%;
+}
+
+.about__block {
+    margin: 0 auto;
+    max-width: 90%;
+    height: 17.1875rem;
+    background: linear-gradient(45deg, $yellow2, $yellow, $yellow3);
+    border-radius: 45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about__block-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.about__block-content-big {
+    h4 {
+        @include textOpenSans (5.5rem, $white);
+    }
+}
+
+.about__block-content-small {
+    p {
+        @include textPoppins(1.75rem, $white);
+        line-height: 125%;
+    }
+}
+
+.about__block-content-03 {
+    margin-top: -2.5rem;
+}
+
+// <----- @ About Page - Media Queries @ -----> //
+
+// <----- 1200 px -----> //
+
+@media screen and (max-width: 1200px) {
+
+    .about__header {
+        margin-bottom: 1rem;
+        h2 {
+            @include subHeaderPoppins(2.25rem, $yellow);
+        }
+    }
+    
+    .about__text {
+        margin-bottom: $margin-section-d3;
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    .about__block {
+        max-width: 95%;
+        height: 15rem;
+    }
+
+    .about__block-content-big {
+        h4 {
+            @include textOpenSans (4.5rem, $white);
+        }
+    }
+    
+    .about__block-content-small {
+        p {
+            @include textPoppins(1.5rem, $white);
+            line-height: 125%;
+        }
+    }
+    
+    .about__block-content-03 {
+        margin-top: -1.75rem;
+    }
+}
+
+
+// <----- 980 px ----->  //
+
+@media screen and (max-width: 975px) {
+
+    .about__block {
+        max-width: 100%;
+        height: 13.75rem;
+    }
+
+    .about__block-content-03 {
+        margin-top: -2rem;
+    }
+
+}
+
+// <----- 875 px (Hamburger Menu)----->  //
+
+@media screen and (max-width: 875px) {
+
+    .about__describe {
+        text-align: center;
+        width: 90%;
+        margin: $margin-section-m2 auto;
+    }
+
+    .about__grid {
+        display:grid;
+        grid-template-columns: 100%;
+        gap: 3rem;
+        justify-content: center;
+        margin-bottom: $margin-section-m2;
+    }
+    
+    .about__content {
+        max-width: 100%;
+    }
+    
+    .about__block {
+        margin: 0 auto;
+        max-width: 40%;
+        height: 16.25rem;
+    }
+
+}
+
+// <----- 775 px ----->  //
+
+@media screen and (max-width: 775px) {
+    .about__block {
+        margin: 0 auto;
+        max-width: 50%;
+        height: 15rem;
+    }
+}
+
+// <----- 675 px ----->  //
+
+@media screen and (max-width: 675px) {
+
+    .about__header {
+        h2 {
+            @include subHeaderPoppins(2rem, $yellow);
+        }
+    }
+    
+    .about__text {
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+    }
+
+    .about__block {
+        margin: 0 auto;
+        max-width: 60%;
+        height: 15rem;
+    }
+
+    .about__block-content-big {
+        h4 {
+            @include textOpenSans (4.25rem, $white);
+        }
+    }
+    
+    .about__block-content-small {
+        p {
+            @include textPoppins(1.375rem, $white);
+            line-height: 125%;
+        }
+    }
+    
+    .about__block-content-03 {
+        margin-top: -1.75rem;
+    }
+}
+
+// <----- 515 px ----->  //
+
+@media screen and (max-width: 515px) {
+
+    .about__block {
+        margin: 0 auto;
+        max-width: 80%;
+        height: 13.75rem;
+    }
+
+}
+
+// <----- 400 px ----->  //
+
+@media screen and (max-width: 400px) {
+
+    .about__block {
+        margin: 0 auto;
+        max-width: 100%;
+        height: 13.75rem;
+    }
+
+}
+

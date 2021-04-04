@@ -1,0 +1,339 @@
+// <----- Variables -----> //
+
+@import "vars";
+
+// <----- First Page -----> //
+
+.first-page {
+    width: 100%;
+    background-image: url("img/bg/first.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.first-page__inner {
+    margin: 10rem 0 5rem 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+
+.first-page__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+    position: relative;
+    z-index: 101;
+}
+
+.first-page__content {
+    animation-name: myanimation;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+.first-page__header {
+    margin-bottom: 2rem;
+    h1 {
+        @include headerPoppins(3.375rem, $white);
+    }
+
+    span {
+        @include headerPoppins(3.375rem, $yellow);
+    }
+}
+
+.first-page__text {
+    margin-bottom: 3rem;
+    p {
+        @include textPoppins(1.75rem, $white);
+    }
+}
+
+.first-page__buttons {
+    display: flex;
+    align-items: center;
+
+    .first-page__st-btn {
+        @include button(125%, 1rem, 45px);
+        padding: 1.3rem 3rem;
+        margin-right: 2rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    .first-page__nd-btn {
+        @include buttonSecond(125%, 1rem, 45px);
+        padding: 1.6rem 3rem;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.first-page__img-container {
+    width: 100%;
+    height: auto;
+
+    animation-name: myanimation2;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+}
+
+.first-page__img {
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+}
+
+// <----- @ First Page - Media Queries @ -----> //
+
+// <----- 1325 px -----> //
+
+@media screen and (max-width: 1325px) {
+    .first-page__inner {
+        grid-template-columns: 55% 45%;
+    }
+
+    .first-page__img {
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+// <----- 1200 px -----> //
+
+@media screen and (max-width: 1200px) {
+    .first-page__inner {
+        margin: 8rem 0 4rem 0;
+    }
+
+    .first-page__header {
+        margin-bottom: 2rem;
+        h1 {
+            @include headerPoppins(3.125rem, $white);
+        }
+
+        span {
+            @include headerPoppins(3.125rem, $yellow);
+        }
+    }
+
+    .first-page__text {
+        p {
+            @include textPoppins(1.625rem, $white);
+        }
+    }
+
+    .first-page__buttons {
+        .first-page__st-btn {
+            padding: 1.2rem 2.8rem;
+            margin-right: 1.5rem;
+        }
+        .first-page__nd-btn {
+            padding: 1.5rem 2.8rem;
+        }
+    }
+
+    .first-page__img {
+        width: 90%;
+    }
+}
+
+// <----- 1095 px -----> //
+
+@media screen and (max-width: 1095px) {
+    .first-page__img {
+        width: 100%;
+    }
+
+    .first-page__inner {
+        grid-template-columns: 60% 40%;
+    }
+}
+
+// <----- 1050 px -----> //
+
+@media screen and (max-width: 1050px) {
+    .first-page__inner {
+        grid-template-columns: 60% 40%;
+    }
+
+    .first-page__img-container {
+        display: none;
+    }
+
+    .first-page__header {
+        margin-bottom: 2rem;
+        h1 {
+            @include headerPoppins(3rem, $white);
+        }
+
+        span {
+            @include headerPoppins(3rem, $yellow);
+        }
+    }
+
+    .first-page__text {
+        margin-bottom: 3rem;
+        p {
+            @include textPoppins(1.5rem, $white);
+        }
+    }
+
+    .first-page__buttons {
+        .first-page__st-btn {
+            @include button(125%, 0.875rem, 45px);
+            letter-spacing: 2px;
+        }
+        .first-page__nd-btn {
+            @include buttonSecond(125%, 0.875rem, 45px);
+            letter-spacing: 2px;
+        }
+    }
+}
+
+// <----- 990 px -----> //
+
+@media screen and (max-width: 990px) {
+    .first-page__inner {
+        grid-template-columns: 65% 35%;
+    }
+}
+
+// <----- 875 px (Hamburger Menu) -----> //
+
+@media screen and (max-width: 875px) {
+    .first-page__inner {
+        margin: 7rem 0 3rem 0;
+        z-index: 100;
+        display: grid;
+        grid-template-columns: 90%;
+        justify-content: center;
+    }
+
+    .first-page__container {
+        margin: 0 auto;
+        padding: $padding-section-m;
+    }
+
+    .first-page__content {
+        animation-name: myanimationmobile;
+        animation-duration: 1.3s;
+        animation-timing-function: ease-in-out;
+
+        text-align: center;
+    }
+
+    .first-page__buttons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .first-page__st-btn {
+            margin-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+// <----- 675 px -----> //
+
+@media screen and (max-width: 675px) {
+
+    .first-page__header {
+        margin-bottom: 1.5rem;
+        h1 {
+            @include headerPoppins(2.625rem, $white);
+        }
+
+        span {
+            @include headerPoppins(2.625rem, $yellow);
+        }
+    }
+
+    .first-page__text {
+        margin-bottom: 1.5rem;
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+    }
+
+    .first-page__buttons {
+        .first-page__st-btn {
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+// <----- 565 px -----> //
+
+@media screen and (max-width: 565px) {
+
+    .first-page__inner {
+        margin: 6rem 0 3rem 0;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .first-page__header {
+        margin-bottom: 1.5rem;
+        h1 {
+            @include headerPoppins(2.25rem, $white);
+        }
+
+        span {
+            @include headerPoppins(2.25rem, $yellow);
+        }
+    }
+
+    .first-page__text {
+        margin-bottom: 2rem;
+        p {
+            @include textPoppins(1.375rem, $white);
+        }
+    }
+    
+}
+
+
+// <----- First Page - Animation -----> //
+
+@keyframes myanimation {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes myanimationmobile {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes myanimation2 {
+    from {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

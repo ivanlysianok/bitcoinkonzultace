@@ -1,0 +1,346 @@
+// <----- Variables and globals -----> //
+
+@import "globals";
+@import "vars";
+
+// <----- Header -----> //
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    transition: ease-in-out all 250ms;
+
+    &.sticky {
+        background-color: $white;
+        box-shadow: rgba(41, 41, 39, 0.1) 0px 7px 29px 0px;
+    }
+
+    &.sticky .header__logo {
+        z-index: 2000;
+        color: $black;
+    }
+
+    &.sticky .nav__links {
+        z-index: 2000;
+        color: $black;
+    }
+
+    &.sticky .nav__links:hover {
+        color: $yellow;
+    }
+}
+
+.header__container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: $padding-section-d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    color: $white;
+}
+
+.header__logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo__img {
+    img {
+        height: 45px;
+    }
+}
+
+.header__logo__text {
+    font-size: 1.375rem;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.header__nav {
+    display: flex;
+}
+
+.nav__links {
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: $white;
+    display: block;
+    transition: ease-in-out color 100ms;
+    position: relative;
+
+    &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 100%;
+        background-color: $yellow;
+        width: 0%;
+        height: 3px;
+        border-radius: 5px;
+
+        transition: ease-in-out width 200ms;
+    }
+
+    &:not(:last-child) {
+        margin-right: 2.75rem;
+    }
+
+    &:hover {
+        color: $yellow;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+
+.header__hamburger {
+    display: none;
+}
+
+// <----- @ Header - Media Queries @ -----> //
+
+// <----- 1215 px -----> //
+
+@media screen and (max-width: 1200px) {
+    
+    .header {
+        height: 80px;
+    }
+    
+    .header__logo__img {
+        img {
+            height: 40px;
+        }
+    }
+
+    .header__logo__text {
+        font-size: 1.25rem;
+        margin-left: 5px;
+    }
+
+    .nav__links {
+        font-size: 1.25rem;
+
+        &:not(:last-child) {
+            margin-right: 2.25rem;
+        }
+    }
+}
+
+// <----- 875 px (Hamburger) ----->  //
+
+@media screen and (max-width: 875px) {
+    .header {
+        height: 75px;
+        &.sticky .line,
+        &.sticky .active .line {
+            background-color: $black;
+        }
+
+        &.clicked {
+            background-color: $white;
+        }
+
+        &.clicked .header__logo {
+            color: $black;
+            z-index: 200;
+        }
+
+        &.clicked .header__hamburger.active .line {
+            background-color: $black;
+        }
+
+        &.clicked .header__overlay {
+            animation: headerFadeIn 250ms ease-in-out forwards;
+        }
+    }
+
+    .header__container {
+        padding: $padding-section-d;
+    }
+
+    .header__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        visibility: hidden;
+    }
+
+    .header__nav {
+        z-index: 100;
+        position: fixed;
+        left: 0;
+        top:-100%;
+        width: 100%;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav__links {
+        z-index: 200;
+        color: $black;
+        font-size: 1.5rem;
+    }
+
+    .nav__links:first-child {
+        margin-top: 2.5rem;
+    }
+
+    .nav__links:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .header__nav.move-out {
+        animation: headerUp 400ms ease-in-out ;
+
+    }
+
+    .header__nav.move-in {
+        top: 0;
+        z-index: 100;
+        animation: headerDown 400ms ease-in-out forwards;
+    }
+
+    .header__hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 45px;
+        height: 26px;
+        z-index: 100;
+
+        cursor: pointer;
+
+        .line {
+            width: 100%;
+            height: 4px;
+            border-radius: 5px;
+            background-color: $white;
+            z-index: 1000;
+
+            transition: ease-in-out all 200ms;
+        }
+
+        &.active .line {
+            background-color: $white;
+        }
+
+        &.active .line01 {
+            transform: rotate(45deg) translate(10px, 5px);
+        }
+
+        &.active .line02 {
+            opacity: 0;
+        }
+
+        &.active .line03 {
+            transform: rotate(-45deg) translate(9px, -5px);
+        }
+    }
+}
+
+// <----- 605 px -----> //
+
+@media screen and (max-width: 625px) {
+
+    .header {
+        height: 70px;
+    }
+    .header__hamburger {
+        width: 40px;
+        height: 24px;
+
+        .line {
+            width: 100%;
+            height: 4px;
+        }
+
+        &.active .line {
+            background-color: $white;
+        }
+
+        &.active .line01 {
+            transform: rotate(45deg) translate(9px, 4px);
+        }
+
+        &.active .line03 {
+            transform: rotate(-45deg) translate(9px, -6px);
+        }
+    }
+
+    .nav__links {
+        font-size: 1.5rem;
+    }
+}
+
+// <----- 420px ----->  //
+
+@media screen and (max-width: 440px) {
+    .header__container {
+        display:flex;
+        justify-content: space-between;
+    }
+    .header__logo__text {
+        display:none;
+    }
+}
+
+// <----- @ Header - Animations @ -----> //
+
+@keyframes headerFadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 0.7;
+        visibility: visible;
+    }
+}
+
+@keyframes headerDown {
+    from {
+        height: 0;
+        visibility: hidden;
+    }
+
+    to {
+        height: 55%;
+        visibility: visible;
+    }
+}
+
+@keyframes headerUp {
+    from {
+        top: 0;
+        visibility: visible;
+    }
+
+    to {
+        top: -100%;
+        visibility: hidden;
+    }
+}

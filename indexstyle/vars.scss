@@ -1,0 +1,108 @@
+// <----- Colors -----> //
+
+$white: #f6f6f6;
+$whiteSecond: #ebebeb;
+$formGray: #8f8f8f;
+$black: #000;
+$yellow: #ffad00;
+$yellow2: #FFC235;
+$yellow3: #C48100;
+
+// <----- Buttons -----> //
+
+@mixin button ($buttonLineHeight, $buttonSize, $buttonBorderRadius) {
+    display: inline-block;
+    
+    cursor: pointer;
+    border:none;
+    outline:none;
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: $buttonLineHeight;
+    letter-spacing: 1.75px;
+    font-size: $buttonSize;
+
+    color: $white;
+    background-color: $yellow;
+    border-radius: $buttonBorderRadius;
+
+    transition: transform ease-in-out 250ms;
+}
+
+@mixin buttonSecond ($buttonLineHeight, $buttonSize, $buttonBorderRadius) {
+     display: inline-block;
+    
+    cursor: pointer;
+
+    outline:none;
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.75px;
+    line-height: $buttonLineHeight;
+    font-size: $buttonSize;
+
+    color: $yellow;
+    background-color: transparent;
+    border: $yellow 5px solid;
+    border-radius: $buttonBorderRadius;
+
+    transition: transform ease-in-out 250ms;
+}
+
+// <----- Fonts and Text -----> //
+
+@mixin headerPoppins ($headerPoppinsSize, $headerPoppinsColor) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    line-height: 125%;
+    font-size: $headerPoppinsSize;
+    color: $headerPoppinsColor;
+}
+
+@mixin subHeaderPoppins ($subHeaderPoppinsSize, $subHeaderPoppinsColor) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: $subHeaderPoppinsSize;
+    color: $subHeaderPoppinsColor;
+}
+
+@mixin subSubHeaderPoppins ($textPoppinsSize, $textPoppinsColor) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    line-height: 150%;
+    font-size: $textPoppinsSize;
+    color: $textPoppinsColor;
+}
+
+@mixin textPoppins ($textPoppinsSize, $textPoppinsColor) {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 150%;
+    font-size: $textPoppinsSize;
+    color: $textPoppinsColor;
+}
+
+@mixin textOpenSans ($textOpenSansSize, $textOpenSansColor) {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: $textOpenSansSize;
+    color: $textOpenSansColor;
+    
+}
+
+// <----- Margins and Paddings -----> //
+
+$margin-section-d: 4rem;  
+$margin-section-d2: 3rem;
+$margin-section-d3: 2.5rem;
+
+$margin-section-n: 3.75rem;
+$margin-section-m: 3.5rem;
+$margin-section-m2: 3rem;
+
+$padding-section-d: 0 40px;
+$padding-section-m: 0 20px;
