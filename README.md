@@ -2,7 +2,7 @@
 > A simple, modern and responsive langing page that serves my client as business card. Here it is - https://www.bitcoinkonzultace.cz/
 
 ## Introduction
-This project was completely created by myself. First I was designed a website template and created UX/UI in Figma (+ edited project images in Photoshop). After I did front-end part and litle bit of back-end in Visual Studio Code. As a result, I uploaded the entire project to the hosting via FTP to the hosting and presented result to the client. Thats it!
+This project was completely done by me. First I was designed a website template and created UX/UI in Figma (+ edited project images in Photoshop). After I did front-end part and little bit of back-end in Visual Studio Code. As a result, I uploaded the entire project via FTP to the hosting and presented result to the client. And thats it!
 
 ## How it was made
 This is a list of technologies that I used in this project
@@ -14,4 +14,4 @@ This is a list of technologies that I used in this project
 The project is completely ready. The client was satisfied with my job.
 
 ## Contact
-Feel free to contact me :) | ivanlysianok@gmail.com.
++420 776 376 453 | ivanlysianok@gmail.com.
